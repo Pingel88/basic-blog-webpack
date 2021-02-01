@@ -34,6 +34,11 @@ Describe: Entry.prototype.countWords()
 Test: "It will return a number that equals the number of words in the body of an entry."
 Code: let todayEntry = new Entry("Title Here", "Count my words");
 Expect: (todayEntry.countWords()).toEqual(3)
+
+Describe: Entry.prototype.countVowels()
+Test: "It will return a number equaling the number of vowels in the body of an entry."
+Code: let todayEntry = new Entry("Title Is...", "Here be some LETTERS");
+Expect: (todayEntry.countVowels()).toEqual(7);
 ```
 
 ## Technologies Used
