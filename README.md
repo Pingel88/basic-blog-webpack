@@ -8,7 +8,7 @@
 ```
 Describe: Entry()
 Test: "It should create an entry object"
-Code: todayEntry = new Entry("Store Trip", "Today, I went to the store") 
+Code: todayEntry = new Entry("Store Trip", "Today, I went to the store")
 Expect: (todayEntry).toEqual({title: "Store Trip", body: "Today, I went to the store"})
 
 Describe: Entry.prototype.makeDatePretty()
@@ -29,15 +29,19 @@ Describe: Journal.prototype.addEntry()
 Test: "It should add an entry instance to journal instance key 'entries'."
 Code: const newJournal = new Journal(); let todayEntry = new Entry(); newJournal.addEntry(todayEntry);
 Expect: (newJournal.entries).toEqual({'1': Entry {date: 2021-02-01T19:56:34.139Z, title: undefined, body: undefined, id: 1}})
-```
 
+Describe: Entry.prototype.countWords()
+Test: "It will return a number that equals the number of words in the body of an entry."
+Code: let todayEntry = new Entry("Title Here", "Count my words");
+Expect: (todayEntry.countWords()).toEqual(3)
+```
 
 ## Technologies Used
 
-* _List all_
-* _the major technologies_
-* _you used in your project_
-* _here_
+* _html, CSS, JavaScript_
+* _node, npm, webpack, ESLint_
+* _VS Code_
+* _git, GitHub_
 
 ## Description
 
