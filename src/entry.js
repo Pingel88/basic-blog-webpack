@@ -41,5 +41,19 @@ Entry.prototype.countConsonants = function() {
   return consonantTotal;
 };
 
+Entry.prototype.getTeaser = function() {
+  const allWords = this.body.split(" ");
+  const firstWords = allWords.slice(0, 8).join(" ");
+  return firstWords;
+};
 
-// "Title Is...", "Here be some letters"
+
+
+// Describe: Entry.prototype.getTeaser()
+// Test: "It will return the first 8 words of a journal entry."
+// Code: let todayEntry = new Entry("Title Is...", "This sentence is going to be more than eight words.");
+// Expect: (todayEntry.getTeaser()).toEqual("This sentence is going to be more than")
+
+// Test: "It will return the first sentence or the first 8 words if sentence is longer than 8 words."
+// Code: let todayEntry = new Entry("Title Is...", "This is a shorter sentence. This is another sentence.");
+// Expect: (todayEntry.getTeaser()).toEqual("This is a shorter sentence.")
