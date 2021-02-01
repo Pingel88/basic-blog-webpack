@@ -23,7 +23,12 @@ Expect: (new Journal()).toEqual({entries: {}, currentId: 0})
 Describe: Journal.prototype.assignId()
 Test: "It should modify the value of the currentId key"
 Code: newJournal = new Journal(); newJournal.assignId()
-Expect: (newJournal).toEqual({entries: {}, currentId: 1})
+Expect: (newJournal.currentId).toEqual(1)
+
+Describe: Journal.prototype.addEntry()
+Test: "It should add an entry instance to journal instance key 'entries'."
+Code: const newJournal = new Journal(); let todayEntry = new Entry(); newJournal.addEntry(todayEntry);
+Expect: (newJournal.entries).toEqual({'1': Entry {date: 2021-02-01T19:56:34.139Z, title: undefined, body: undefined, id: 1}})
 ```
 
 
