@@ -1,4 +1,4 @@
-export default function Entry(title, body) {
+function Entry(title, body) {
   this.date = new Date();
   this.title = title;
   this.body = body;
@@ -44,10 +44,15 @@ Entry.prototype.countConsonants = function() {
 Entry.prototype.getTeaser = function() {
   const allWords = this.body.split(" ");
   const firstWords = allWords.slice(0, 8).join(" ");
+  const firstChars = firstWords.split("");
+  for (let index = 0; index < firstChars.length; index++) {
+    if (firstChars[index] === "." || firstChars[index] === "?" || firstChars[index] === "!") {
+      const firstSentence = firstChars.slice(0, index + 1).join("");
+      return firstSentence;
+    } 
+  }
   return firstWords;
 };
-
-
 
 // Describe: Entry.prototype.getTeaser()
 // Test: "It will return the first 8 words of a journal entry."
