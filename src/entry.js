@@ -20,12 +20,26 @@ Entry.prototype.countWords = function() {
 Entry.prototype.countVowels = function() {
   const vowels = ["a", "e", "i", "o", "u"];
   const allChars = this.body.toLowerCase().split('');
-  let wordTotal = 0;
+  let vowelTotal = 0;
   for (const char of allChars) {
     if (vowels.includes(char)) {
-      wordTotal++;
+      vowelTotal++;
     }
   }
-  return wordTotal;
+  return vowelTotal;
 };
+
+Entry.prototype.countConsonants = function() {
+  const consonants = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z"];
+  const allChars = this.body.toLowerCase().split('');
+  let consonantTotal = 0;
+  allChars.forEach(function(element) {
+    if (consonants.includes(element)) {
+      consonantTotal++;
+    }
+  });
+  return consonantTotal;
+};
+
+
 // "Title Is...", "Here be some letters"

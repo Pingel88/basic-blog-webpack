@@ -7,22 +7,22 @@
 ## Specs
 ```
 Describe: Entry()
-Test: "It should create an entry object"
-Code: todayEntry = new Entry("Store Trip", "Today, I went to the store")
+Test: "It should create an entry object."
+Code: todayEntry = new Entry("Store Trip", "Today, I went to the store");
 Expect: (todayEntry).toEqual({title: "Store Trip", body: "Today, I went to the store"})
 
 Describe: Entry.prototype.makeDatePretty()
-Test: "It should modify the date value to a pretty format"
-Code: todayEntry = new Entry("Store Trip", "Today, I went to the store")
+Test: "It should modify the date value to a pretty format."
+Code: todayEntry = new Entry("Store Trip", "Today, I went to the store");
 Expect: (todayEntry.makeDatePretty()).toEqual("Monday, 1 February 2021")
 
 Describe: Journal()
-Test: "It should create a journal object"
+Test: "It should create a journal object."
 Expect: (new Journal()).toEqual({entries: {}, currentId: 0})
 
 Describe: Journal.prototype.assignId()
-Test: "It should modify the value of the currentId key"
-Code: newJournal = new Journal(); newJournal.assignId()
+Test: "It should modify the value of the currentId key."
+Code: newJournal = new Journal(); newJournal.assignId();
 Expect: (newJournal.currentId).toEqual(1)
 
 Describe: Journal.prototype.addEntry()
@@ -38,7 +38,12 @@ Expect: (todayEntry.countWords()).toEqual(3)
 Describe: Entry.prototype.countVowels()
 Test: "It will return a number equaling the number of vowels in the body of an entry."
 Code: let todayEntry = new Entry("Title Is...", "Here be some LETTERS");
-Expect: (todayEntry.countVowels()).toEqual(7);
+Expect: (todayEntry.countVowels()).toEqual(7)
+
+Describe: Entry.prototype.countConsonants()
+Test: "It will return a number equaling the number of consonants in the body of an entry."
+Code: let todayEntry = new Entry("Title Is...", "Here be some LETTERS");
+Expect: (todayEntry.countVowels()).toEqual(10)
 ```
 
 ## Technologies Used
