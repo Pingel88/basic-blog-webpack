@@ -8,17 +8,22 @@
 ```
 Describe: Entry()
 Test: "It should create an entry object"
-Code: todayJournal = new Entry("Store Trip", "Today, I went to the store") 
-Expect: (todayJournal).toEqual({title: "Store Trip", body: "Today, I went to the store"})
+Code: todayEntry = new Entry("Store Trip", "Today, I went to the store") 
+Expect: (todayEntry).toEqual({title: "Store Trip", body: "Today, I went to the store"})
 
 Describe: Entry.prototype.makeDatePretty()
 Test: "It should modify the date value to a pretty format"
-Code: todayJournal = new Entry("Store Trip", "Today, I went to the store")
-Expect: (todayJournal.makeDatePretty()).toEqual("Monday, 1 February 2021")
+Code: todayEntry = new Entry("Store Trip", "Today, I went to the store")
+Expect: (todayEntry.makeDatePretty()).toEqual("Monday, 1 February 2021")
 
 Describe: Journal()
 Test: "It should create a journal object"
 Expect: (new Journal()).toEqual({entries: {}, currentId: 0})
+
+Describe: Journal.prototype.assignId()
+Test: "It should modify the value of the currentId key"
+Code: newJournal = new Journal(); newJournal.assignId()
+Expect: (newJournal).toEqual({entries: {}, currentId: 1})
 ```
 
 
