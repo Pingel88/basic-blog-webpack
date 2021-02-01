@@ -15,6 +15,10 @@ Describe: Entry.prototype.makeDatePretty()
 Test: "It should modify the date value to a pretty format"
 Code: todayJournal = new Entry("Store Trip", "Today, I went to the store")
 Expect: (todayJournal.makeDatePretty()).toEqual("Monday, 1 February 2021")
+
+Describe: Journal()
+Test: "It should create a journal object"
+Expect: (new Journal()).toEqual({entries: {}, currentId: 0})
 ```
 
 

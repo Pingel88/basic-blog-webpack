@@ -3,6 +3,7 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import Entry from './entry.js';
+import Journal from './journal.js';
 
 $(document).ready(function() {
   $('#triangle-checker-form').submit(function(event) {
