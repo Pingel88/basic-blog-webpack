@@ -1,4 +1,4 @@
-function Entry(title, body) {
+export function Entry(title, body) {
   this.date = new Date();
   this.title = title;
   this.body = body;
@@ -53,12 +53,3 @@ Entry.prototype.getTeaser = function() {
   }
   return firstWords;
 };
-
-// Describe: Entry.prototype.getTeaser()
-// Test: "It will return the first 8 words of a journal entry."
-// Code: let todayEntry = new Entry("Title Is...", "This sentence is going to be more than eight words.");
-// Expect: (todayEntry.getTeaser()).toEqual("This sentence is going to be more than")
-
-// Test: "It will return the first sentence or the first 8 words if sentence is longer than 8 words."
-// Code: let todayEntry = new Entry("Title Is...", "This is a shorter sentence. This is another sentence.");
-// Expect: (todayEntry.getTeaser()).toEqual("This is a shorter sentence.")

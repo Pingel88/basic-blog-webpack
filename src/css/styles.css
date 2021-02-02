@@ -1,3 +1,24 @@
 body {
-  background-color: greenyellow;
+  background-color: ivory;
+  font-family: "Volkhov", serif;   
+}
+ul.all-entries {
+  list-style-type: none;
+}
+.entry-title, h1, h2 {
+  font-family: "Special Elite";
+  font-weight: 700;
+}
+.entry-title {
+  font-size: 2rem;
+}
+.time-stamp {
+  font-family: 'Crimson Text', serif;
+}
+#user-text {
+  width: 80%;
+  min-height: 6rem;
+}
+.counter {
+  font-size: 12px;
 }

@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <title>Journal</title>
 </head>
 <body>
-  <h3>Enter three lengths to determine if they can make a triangle.</h3>
-  <form id="triangle-checker-form">
-    <label for="length1">Enter a number:</label>
-    <input id="length1" type="number">
-    <label for="length2">Enter a number:</label>
-    <input id="length2" type="number">
-    <label for="length3">Enter a number:</label>
-    <input id="length3" type="number">
-    <button type="submit">Submit</button>
-  </form>
-  <ul id="response"></ul>
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Write your journal</h1>
+      <p>also: timestamps are included by default</p>
+    </div>
+    <form class="form-check">
+      <label for="give-title">Today's title:</label>
+      <input class="form-check" id="user-title" name="give-title" type="text">
+      <label for="give-body-text">Body of today's entry:</label>
+      <textarea class="form-check" id="user-text" name="give-body-text"></textarea>
+      <button type="submit">Submit</button>
+    </form>
+    <div id="display-entries">
+      <ul class="all-entries">
+      </ul>
+    </div>
+  </div>
 </body>
 </html>
